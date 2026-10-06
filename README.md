@@ -60,8 +60,9 @@ sima doctor .
 sima lint .
 ```
 
-For install details, repo-URL agent bootstrap, release process, and agent-specific usage, see:
+For install details, roadmap, repo-URL agent bootstrap, release process, and agent-specific usage, see:
 
+- [Roadmap](docs/roadmap.md)
 - [5-Minute Setup](docs/5-minute-setup.md)
 - [Agent Bootstrap](docs/agent-bootstrap.md)
 - [Using SIMA with Agents](docs/agent-usage.md)

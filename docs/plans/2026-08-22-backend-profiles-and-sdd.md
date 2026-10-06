@@ -1,6 +1,8 @@
-# Backend Profiles and SDD Support Implementation Plan
+# Backend Profiles and SDD Support — Historical Implementation Plan
 
-> **For Hermes:** Use this plan as the current SIMA dogfood slice. Keep tasks small, verified, and committed.
+> **Status: completed.** This document records the bounded August 2026 implementation slice. It is not a roadmap: use [`docs/roadmap.md`](../roadmap.md) as the single source of truth for current priorities and future milestones.
+
+> **For Hermes:** Use this plan only to understand or verify the completed slice. Keep new work aligned with `docs/roadmap.md`.
 
 **Goal:** Add backend profiles for multiple Claude Code/Codex configurations and lay down SDD as a first-class SIMA workflow.
 
