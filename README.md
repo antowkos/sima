@@ -22,14 +22,19 @@ Use GitHub CLI access:
 mkdir -p /tmp/sima-install
 cd /tmp/sima-install
 
-gh release download v0.1.0-alpha.2 \
-  --repo Antowkos/sima \
-  --pattern 'sima_0.1.0-alpha.2_darwin_arm64.tar.gz'
+# SIMA currently ships prereleases, so resolve the newest GitHub release explicitly.
+tag="$(gh release list --repo antowkos/sima --limit 1 --json tagName --jq '.[0].tagName')"
+version="${tag#v}"
+archive="sima_${version}_darwin_arm64.tar.gz"
 
-tar -xzf sima_0.1.0-alpha.2_darwin_arm64.tar.gz
-install -m 0755 sima_0.1.0-alpha.2_darwin_arm64/sima ~/.local/bin/sima
+gh release download "$tag" \
+  --repo antowkos/sima \
+  --pattern "$archive"
 
-sima version
+tar -xzf "$archive"
+install -m 0755 "sima_${version}_darwin_arm64/sima" ~/.local/bin/sima
+
+~/.local/bin/sima version
 ```
 
 Features currently on `main` but not yet tagged are available by building from source until the next release.
